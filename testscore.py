@@ -1,32 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@Siluryan
-Siluryan /
-Bibliotecas
-Public
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-
-    Settings
-
-Bibliotecas/Testscore1.py /
-@Siluryan
-Siluryan Update Testscore1.py
-Latest commit a5f0fa2 on 9 Mar
-History
-1 contributor
-103 lines (86 sloc) 2.31 KB
 if __name__ == '__main__':
     s = input('STRING: ')
     vg = ['A','E','I','O','U']
