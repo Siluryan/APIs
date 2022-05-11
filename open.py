@@ -3,7 +3,7 @@ def abrir(caminho):
 	print(caminho.read(),'\n')
 
 
-caminho = '/home/guilherme/Which field in the IPv6 header points to optional'
+caminho = input('Diretório do arquivo: ')
 
 	
 for i in range(3):
