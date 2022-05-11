@@ -10,7 +10,7 @@ for i in range(3):
 	abrir(caminho)
 
 
-print(caminho)
+print(caminho,'\n')
 
 
 diretorio = input('Diretório do arquivo: ')
