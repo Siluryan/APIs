@@ -4,7 +4,7 @@ while True:
 	try:
 		diretorio = input('Diretório do arquivo: ')
 		caminho = open(diretorio)
-		print(caminho.read(),'\n')
+		print(f'\nConteúdo do arquivo: {caminho.read()}')
 		caminho.close()
 		
 	except FileNotFoundError as error:
@@ -13,7 +13,7 @@ while True:
 
 
 	try:
-		diretorio = input('Diretório do arquivo: ')
+		diretorio = input('\nConfirme o diretório do arquivo: ')
 		caminho = open(diretorio,'r+')
 		
 	except FileNotFoundError as error:
