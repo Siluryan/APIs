@@ -1,5 +1,4 @@
 while True:
-
 	
 	try:
 		diretorio = input('Diretório do arquivo: ')
