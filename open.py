@@ -31,4 +31,5 @@ while True:
 
 	caminho = open(diretorio)
 	print(f'\nConteúdo do arquivo: {caminho.read()}')
+	caminho.close()
 	break
