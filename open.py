@@ -1,27 +1,33 @@
-def abrir(caminho):
-	caminho = open(caminho)
-	print(caminho.read(),'\n')
+while True:
+
+	try:
+		diretorio = input('Diretório do arquivo: ')
+		caminho = open(diretorio)
+		print(caminho.read(),'\n')
+		caminho.close()
+		
+	except FileNotFoundError as error:
+		print('\nO arquivo não foi encontrado!')
+		break
 
 
-caminho = input('Diretório do arquivo: ')
+	try:
+		diretorio = input('Diretório do arquivo: ')
+		caminho = open(diretorio,'r+')
+		
+	except FileNotFoundError as error:
+		print('\nO arquivo não foi encontrado!')
+		break
 
+
+	def escrever(caminho):
+		caminho.write(input('\nDigite a frase que irá sobrescrever o arquivo: '))
+		caminho.close()
+
+
+	escrever(caminho)
 	
-for i in range(3):
-	abrir(caminho)
 
-
-print(caminho,'\n')
-
-
-diretorio = input('Diretório do arquivo: ')
-caminho = open(diretorio,'r+')
-
-
-def escrever(caminho):
-	caminho.write(input('Digite a frase que irá sobrescrever o arquivo: '))
-
-
-escrever(caminho)
-
-
-print(caminho.read())
+	caminho = open(diretorio)
+	print(f'\nConteúdo do arquivo: {caminho.read()}')
+	break
