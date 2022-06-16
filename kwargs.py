@@ -9,5 +9,5 @@ def kwargs_teste(valor, **kwargs):
 
     return total
 
-kwarg_start = kwargs_teste(valor, chave_desconto = float(input('Valor do desconto: ')))
-print(kwarg_start)
+kwargs_start = kwargs_teste(valor, chave_desconto = float(input('Valor do desconto: ')))
+print(kwargs_start)
