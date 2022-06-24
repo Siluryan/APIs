@@ -33,16 +33,19 @@ for i in tabela_master:
 v = 0
 a = 0
 b = 1
-for v in range(len(lista)-1):
-	compra = lista[a]
-	venda = lista[b]
-	diferenca = venda - compra
-	if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
-		print(f'{tabela[v]}: menor ou igual a 10%')		
-	elif math.isclose(diferenca, compra/5) or (diferenca < compra/5):
-		print(f'{tabela[v]}: menor ou igual a 20%')
+for v in range((len(lista)-1)):
+	if a > (len(lista)-1):
+		pass
 	else:
-		print(f'{tabela[v]}: maior que 20%')
-	a += 2
-	b += 2
-	v += 2
+		compra = lista[a]
+		venda = lista[b]
+		diferenca = venda - compra
+		if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
+			print(f'{tabela[v]}: menor ou igual a 10%')
+		elif math.isclose(diferenca, compra/5) or (diferenca < compra/5):
+			print(f'{tabela[v]}: menor ou igual a 20%')
+		else:
+			print(f'{tabela[v]}: maior que 20%')
+		a += 2
+		b += 2
+		v += 2
