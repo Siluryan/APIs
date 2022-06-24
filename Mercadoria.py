@@ -36,7 +36,7 @@ b = 1
 while v < len(lista)-1:	
 	if math.isclose(lista[a]-lista[b], (lista[a]/10)) or (lista[a]-lista[b]<(lista[a]/10)):
 		print(f'{tabela[v]}: menor que 10%')
-	elif math.isclose(lista[a]-lista[b], (lista[a]/10)) or (lista[a]-lista[b]<(lista[a]/15)):
+	elif math.isclose(lista[a]-lista[b], (lista[a]/10)) or (lista[a]-lista[b]<(lista[a]/5)):
 		print(f'{tabela[v]}: menor que 20%')
 	else:
 		print(f'{tabela[v]}: maior ou igual a 20%')		
