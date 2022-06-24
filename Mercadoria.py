@@ -38,17 +38,10 @@ for v in range(len(lista)-1):
 	venda = lista[b]
 	diferenca = venda - compra
 	if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
-		print(f'{tabela[v]}: menor ou igual a 10%')
-		print(compra)
-		print(venda)
-		print(compra / venda)
-		print(compra / 10)
+		print(f'{tabela[v]}: menor ou igual a 10%')		
 	elif math.isclose(diferenca, compra/5) or (diferenca < compra/5):
 		print(f'{tabela[v]}: menor ou igual a 20%')
 	else:
-		print(compra)
-		print(venda)
-		print(diferenca)
 		print(f'{tabela[v]}: maior que 20%')
 	a += 2
 	b += 2
