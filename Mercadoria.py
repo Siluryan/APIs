@@ -22,6 +22,10 @@ for i in range(total_input):
 
 #coloca os valores numa lista para ser possível a iteração
 idx = 1
+if total_input == 1:
+	lista.append(valor_compra)
+	lista.append(valor_venda)
+
 for i in tabela:
 	if idx > len(tabela):
 		pass
@@ -31,18 +35,30 @@ for i in tabela:
 
 #usa a lib math para poder comparar o tipo float
 v = 0
-for item in range((len(lista)-1)):
-	for i in lista:
-		if v >= len(tabela):
-			pass
-		else:
-			compra = i[0]
-			venda = i[1]
-			diferenca = venda - compra
-			if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
-				print(f'{tabela[v]}: menor ou igual a 10%')
-			elif math.isclose(diferenca, compra/5) or (diferenca < compra/5):
-				print(f'{tabela[v]}: menor ou igual a 20%')
+if total_input == 1:
+	compra = valor_compra
+	venda = valor_venda
+	diferenca = venda - compra
+	if math.isclose(diferenca, compra / 10) or (diferenca < compra / 10):
+		print(f'{tabela[v]}: menor ou igual a 10%')
+	elif math.isclose(diferenca, compra / 5) or (diferenca < compra / 5):
+		print(f'{tabela[v]}: menor ou igual a 20%')
+	else:
+		print(f'{tabela[v]}: maior que 20%')
+
+else:
+	for item in range((len(lista)-1)):
+		for i in lista:
+			if v >= len(tabela):
+				pass
 			else:
-				print(f'{tabela[v]}: maior que 20%')
-			v += 2
+				compra = i[0]
+				venda = i[1]
+				diferenca = venda - compra
+				if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
+					print(f'{tabela[v]}: menor ou igual a 10%')
+				elif math.isclose(diferenca, compra/5) or (diferenca < compra/5):
+					print(f'{tabela[v]}: menor ou igual a 20%')
+				else:
+					print(f'{tabela[v]}: maior que 20%')
+				v += 2
