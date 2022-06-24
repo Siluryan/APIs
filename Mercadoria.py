@@ -35,15 +35,13 @@ for i in tabela:
 
 #usa a lib math para poder comparar o tipo float
 v = 0
-a = 0
-b = 1
-for v in range((len(lista)-1)):
-	if a > (len(lista)-1):
-		pass
-	else:
-		for i in lista:
-			compra = i[a]
-			venda = i[b]
+for item in range((len(lista)-1)):
+	for i in lista:
+		if v >= len(tabela):
+			pass
+		else:
+			compra = i[0]
+			venda = i[1]
 			diferenca = venda - compra
 			if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
 				print(f'{tabela[v]}: menor ou igual a 10%')
