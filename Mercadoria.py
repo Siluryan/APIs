@@ -1,5 +1,3 @@
-#AINDA ESTÁ COM ERROS
-
 import math
 
 print('Lembre-se de usar PONTOS em vez de vírgulas para separar os centavos\n')
