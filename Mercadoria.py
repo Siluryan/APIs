@@ -18,10 +18,6 @@ for i in range(total_input):
 	compra_venda.append(valor_venda)
 	tabela.append(nome_produto)
 	tabela.append(compra_venda)
-
-	#coloca o par na tabela principal
-	#tabela_master.append(tabela)
-
 	i += 1
 
 #coloca os valores numa lista para ser possível a iteração
