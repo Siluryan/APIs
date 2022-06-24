@@ -22,14 +22,18 @@ for i in range(total_input):
 	tabela.append(compra_venda)
 
 	#coloca o par na tabela principal
-	tabela_master.append(tabela)
+	#tabela_master.append(tabela)
 
 	i += 1
 
 #coloca os valores numa lista para ser possível a iteração
-for i in tabela_master:
-	for v in i[1]:
-		lista.append(v)
+idx = 1
+for i in tabela:
+	if idx > len(tabela):
+		pass
+	else:
+		lista.append(tabela[idx])
+		idx += 2
 
 #usa a lib math para poder comparar o tipo float
 v = 0
@@ -39,15 +43,15 @@ for v in range((len(lista)-1)):
 	if a > (len(lista)-1):
 		pass
 	else:
-		compra = lista[a]
-		venda = lista[b]
-		diferenca = venda - compra
-		if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
-			print(f'{tabela[v]}: menor ou igual a 10%')
-		elif math.isclose(diferenca, compra/5) or (diferenca < compra/5):
-			print(f'{tabela[v]}: menor ou igual a 20%')
-		else:
-			print(f'{tabela[v]}: maior que 20%')
-		a += 2
-		b += 2
-		v += 2
+		for i in lista:
+
+			compra = i[a]
+			venda = i[b]
+			diferenca = venda - compra
+			if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
+				print(f'{tabela[v]}: menor ou igual a 10%')
+			elif math.isclose(diferenca, compra/5) or (diferenca < compra/5):
+				print(f'{tabela[v]}: menor ou igual a 20%')
+			else:
+				print(f'{tabela[v]}: maior que 20%')
+			v += 2
