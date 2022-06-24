@@ -47,18 +47,17 @@ if total_input == 1:
 		print(f'{tabela[v]}: maior que 20%')
 
 else:
-	for i in range(len(lista)):
-		for i in lista:
-			if v >= len(tabela):
-				pass
+	for i in lista:
+		if v >= len(tabela):
+			pass
+		else:
+			compra = i[0]
+			venda = i[1]
+			diferenca = venda - compra
+			if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
+				print(f'{tabela[v]}: menor ou igual a 10%')
+			elif math.isclose(diferenca, compra/5) or (diferenca < compra/5):
+				print(f'{tabela[v]}: menor ou igual a 20%')
 			else:
-				compra = i[0]
-				venda = i[1]
-				diferenca = venda - compra
-				if math.isclose(diferenca, compra/10) or (diferenca < compra/10):
-					print(f'{tabela[v]}: menor ou igual a 10%')
-				elif math.isclose(diferenca, compra/5) or (diferenca < compra/5):
-					print(f'{tabela[v]}: menor ou igual a 20%')
-				else:
-					print(f'{tabela[v]}: maior que 20%')
-				v += 2
+				print(f'{tabela[v]}: maior que 20%')
+			v += 2
