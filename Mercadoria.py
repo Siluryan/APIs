@@ -3,7 +3,6 @@ import math
 print('Lembre-se de usar PONTOS em vez de vírgulas para separar os centavos\n')
 lista = list()
 tabela = list()
-tabela_master = list()
 total_input = int(input('Quantos produtos quer adicionar? \n'))
 
 for i in range(total_input):
