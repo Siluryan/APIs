@@ -47,7 +47,7 @@ if total_input == 1:
 		print(f'{tabela[v]}: maior que 20%')
 
 else:
-	for i in range((len(lista)-1)):
+	for i in range(len(lista)):
 		for i in lista:
 			if v >= len(tabela):
 				pass
