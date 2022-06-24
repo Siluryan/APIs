@@ -33,7 +33,7 @@ for i in tabela:
 		lista.append(tabela[idx])
 		idx += 2
 
-#usa a lib math para poder comparar o tipo float
+#usa a lib math pra poder comparar o tipo float
 v = 0
 if total_input == 1:
 	compra = valor_compra
