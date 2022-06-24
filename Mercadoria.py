@@ -42,7 +42,6 @@ for v in range((len(lista)-1)):
 		pass
 	else:
 		for i in lista:
-
 			compra = i[a]
 			venda = i[b]
 			diferenca = venda - compra
