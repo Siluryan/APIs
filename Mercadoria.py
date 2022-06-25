@@ -19,7 +19,7 @@ for i in range(total_input):
 	tabela.append(compra_venda)
 	i += 1
 
-#coloca os valores numa lista para ser possível a iteração
+#coloca os valores numa lista pra ser possível a iteração
 idx = 1
 if total_input == 1:
 	lista.append(valor_compra)
