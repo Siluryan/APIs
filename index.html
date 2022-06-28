@@ -9,26 +9,131 @@
 						#51bced 25%, #60baf1 33.33%, #6eb8f3 41.67%, #7db5f4 50%,
 						#8bb2f4 58.33%, #99aff2 66.67%, #a7acf0 75%, #b3a9ec 83.33%,
 						#bfa5e7 91.67%, #caa2e1 100%);
-				
 			}
-
+			
 			h1 {
 				color:  white;
 				text-align: center;
 			}
-
+			
 			p {
 				font-family: verdana;
 				font-size: 20px;
 				text-align: center;
 			}
+			
+			* {
+  				margin: 0;
+  				padding: 0;
+			}
+
+			.elementos {
+				display: flex;
+				justify-content: space-evenly;
+				list-style: none;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				color: whitesmoke;
+				font-weight: 500;
+				font-size: 20px;
+				font-family: 'Verdana';
+				background-color: #89a0ce;
+				background-image: linear-gradient(rgb(184, 203, 238), rgb(104, 119, 185));
+				transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+			}
+
+			.linhas {
+  				cursor: pointer;
+			}
+
+			.span {
+				width: 30px;
+				height: 4px;
+				background-color: black;
+				margin-bottom: 5px;
+				border-radius: 2px;
+				transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+			}
+
+			.botao {
+  				display: none;
+			}
+
+			.barra-lateral {
+  				transform: translateX(0px);
+			}
+
+			.linha-0 {
+				transform: rotate(45deg) translate(4.5px, 12px);
+			}
+
+			.linha-1 {
+				transform: scale(0);
+			}
+			.linha-2 {
+				transform: rotate(-45deg) translateY(-7.5px);
+			}
+
+			@media (max-width: 450px) {
+			.elementos {
+			    flex-direction: column;
+			    align-items: center;
+			    position: absolute;
+			    margin: 0;
+			    padding: 20px;
+			    width: 35%;
+			    height: 100%;
+			    transform: translateX(-100%);
+			}
+
+			  .botao {
+			  	display: flex;
+			    flex-direction: column;
+			    align-items: flex-start;
+			    margin-left: 20px;
+			    padding-top: 20px;
+			}
+		}
+
 		</style>
+
+		<script type="text/javascript">
+			const nav = document.querySelector(".elementos");
+			const botao = document.querySelector(".linhas");
+			const linhas = document.querySelectorAll(".span");
+
+			function alternar() {
+				nav.classList.toggle("barra-lateral");
+				linhas[0].classList.toggle("linha-0");
+				linhas[1].classList.toggle("linha-1");
+				linhas[2].classList.toggle("linha-2");
+			}
+			
+			botao.addEventListener("click", alternar);
+
+		</script>
 
 
 		<title>Página de Testes</title>
 	</head>
 	
 	<body>
+		<nav class="navbar">
+  			<ul class="elementos">
+    		<li><a href="#">Página inicial</a></li>
+    		<li><a href="#">Sobre</a></li>
+    		<li><a href="#">Contato</a></li>
+  			</ul>
+		</nav>
+
+		<div class="botao">
+  		<div class="linhas">
+    	<div class="span"></div>
+    	<div class="span"></div>
+    	<div class="span"></div>
+  		</div>
+
+	</div>
 		<p><h1>Não tem nada aqui</h1></p>
 		<p style="font-family: cursive, arial, helvetica;"><small>Continua não tendo nada aqui, mas a letra tá menor</small></p>
 		<br>
@@ -57,11 +162,11 @@
 
 		</pre>
 	
-		<div align="left" style="font-family: arial, helvetica;">Não custava nada fazer uma lista de exemplo:
+		<div align="left" style="font-family: helvetica;">Não custava nada fazer uma lista de exemplo:
 		<ul>
-		<li><h4>Item 1</h4></li>
-		<li><h4>Item 2</h4></li>
-		<li><h4>Item 3</h4></li>
+		<li><h4>&nbsp; Item 1</h4></li>
+		<li><h4>&nbsp; Item 2</h4></li>
+		<li><h4>&nbsp; Item 3</h4></li>
 		</ul>
 		</div>
 	</body>
