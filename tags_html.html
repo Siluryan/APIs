@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Estudo HTML</title>
+     
+      <style>
+         body {
+         background-color: aliceblue;
+         }
+         aside {
+         padding-left: 5px;
+         margin-left: 15px;
+         float: right;
+         font-style: italic;
+         background-color: lightgray;
+         text-align: center;
+         }
+         section {
+         background-color: lightgray;
+         }
+         article {
+         background-color: lightgray;    
+         }
+         .all-browsers {
+         margin: 0;
+         padding: 5px;
+         background-color: lightgray;
+         }
+         .all-browsers > h1, .browser {
+         margin: 10px;
+         padding: 5px;
+         }      
+         .browser {
+         background: white;
+         }
+         .browser > h2, p {
+         margin: 4px;
+         font-size: 90%;
+         }
+         #cont-parag-aside {
+         text-align: left;
+         }
+         #ref {
+         text-align: left;
+         }
+      </style>     
+   </head>
+  
+   <body>
+      <table border="1">
+         <tr>
+            <td>Coluna 1</td>
+            <td>Coluna 2</td>
+            <td>Coluna 3</td>
+         </tr>
+      </table>
+     
+      <article>
+         <h4>Um ARTICLE realmente impressionante</h4>
+         <p>Lotes de texto incrível antes da section</p>
+      </article>
+     
+      <p> Parágrafo anterior ao aside</p>
+     
+      <section>
+         <p>Section anterior ao aside</p>
+      </section>
+     
+      <aside>
+         <p id="cont-parag-aside">ASIDE - Algum conteúdo relacionado - ASIDE</p>
+         <section>
+            <h1>Section</h1>
+            <p>Section dentro do aside</p>
+         </section>
+      </aside>
+     
+      <p>Parágrafo posterior ao aside</p>
+     
+      <article class="all-browsers">
+         <h1>Most Popular Browsers</h1>
+         <article class="browser">
+            <h2>Google Chrome</h2>
+            <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+         </article>
+         <article class="browser">
+            <h2>Mozilla Firefox</h2>
+            <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+         </article>
+         <article class="browser">
+            <h2>Microsoft Edge</h2>
+            <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+         </article>
+      </article>
+     
+      <aside>
+         <p id="cont-parag-aside">
+         <h2>Referências</h2>
+         </p>
+         <section id="ref">
+            <h1>Section</h1>
+            <ul>
+               <li><a href="https://kenzie.com.br/blog/comentario-html/">Comentários</a></li>
+               <li><a href="https://www.homehost.com.br/blog/criar-sites/tabela-html/">Tabelas</a></li>
+               <li><a href="https://www.homehost.com.br/blog/tutoriais/tags-html/">Tags</a></li>
+               <li><a href="https://blog.geekhunter.com.br/voce-conhece-html-semantico/">HTML semântico</a></li>
+               <li><a href="https://cursos.alura.com.br/forum/topico-diferenca-entre-div-section-e-aside-40516">Div, Section e Aside</a></li>
+               <li><a href="https://www.w3schools.com/tags/tag_aside.asp">Aside 1</a></li>
+               <li><a href="https://ayltoninacio.com.br/blog/como-usar-tag-aside-do-html">Aside 2</a></li>
+               <li><a href="https://tableless.com.br/sections-elemento-aside/">Aside 3</a></li>
+               <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/section">Section Definiton</a></li>
+               <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/aside">Aside Definition</a></li>
+               <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/article">Article Definition</a></li>
+            </ul>
+         </section>
+      </aside>  
+   </body>
+</html>
