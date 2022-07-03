@@ -1,5 +1,5 @@
-import http.client
 import socket
+import http.client
 
 if __name__ == '__main__':	
 
