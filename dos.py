@@ -2,7 +2,7 @@ import socket
 
 if __name__ == '__main__':	
 
-	host = input('Enter Host: ')
+	host = input("Enter Host: ")
 	host = host.replace("http://", "")
 	open_port = int(input("Open Port: "))
 	conn = input("Number of Packets: ")
