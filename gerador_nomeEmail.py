@@ -7,10 +7,10 @@ import mmap
 
 lista_nomes = list()
 lista_emails = list()
-lista_intercalada = list()
+
 
 def contar_linhas():
-    with open("caminho pra sua lista crua", "r+") as myfile:
+    with open("caminho para lista crua", "r+") as myfile:
         mm = mmap.mmap(myfile.fileno(), 0)
         total_lines = 0
 
@@ -23,17 +23,15 @@ total_lines = contar_linhas()
 
 def linha_to_string():
 
-    with open("caminho pra sua lista crua") as lista:
+    with open("caminho para lista crua") as lista:
        
         linha = lista.readline(total_lines).replace('\n', ' ')
         lista_nomes.append(linha)
 
-    with open("caminho pra sua lista crua", 'r') as fr:
-        # reading line by line
-        lines = fr.readlines() 
+    with open("caminho para lista crua", 'r') as fr:        
+        lines = fr.readlines()    
         
-        # opening in writing mode
-        with open("caminho pra sua lista crua", 'w') as fw:
+        with open("caminho para lista crua", 'w') as fw:
             ptr = 1
             for line in lines:
                 if ptr != 1:
@@ -47,7 +45,7 @@ def criar_email(lista):
         i = i.lower()+"@gmail.com"
         lista_emails.append(i)
         
-        with open("caminho pra sua lista de emails", "a") as lista_final:   
+        with open("caminho para lista_emails", "a") as lista_final:   
             lista_final.write("%s\n" %i)
             lista.pop(0)            
             criar_email(lista)
@@ -55,8 +53,10 @@ def criar_email(lista):
 for i in range(total_lines):
     linha_to_string()
 
-with open("caminho pra sua lista de nomes", 'w') as temp_file:
+with open("caminho para lista_nomes", 'w') as temp_file:
+   
     for item in lista_nomes:
         temp_file.write("%s\n" % item)
 
+lista_nomes.reverse()
 criar_email(lista_nomes)
