@@ -8,7 +8,6 @@ import mmap
 lista_nomes = list()
 lista_emails = list()
 
-
 def contar_linhas():
     with open("caminho para lista crua", "r+") as myfile:
         mm = mmap.mmap(myfile.fileno(), 0)
