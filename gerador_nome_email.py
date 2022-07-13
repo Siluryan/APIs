@@ -11,7 +11,6 @@ def contar_linhas():
     with open("caminho para lista crua", "r+") as myfile:
         mm = mmap.mmap(myfile.fileno(), 0)
         total_lines = 0
-
         while mm.readline():
             total_lines += 1
 
@@ -25,8 +24,7 @@ def linha_to_string():
         lista_nomes.append(linha)
 
     with open("caminho para lista crua", 'r') as fr:        
-        lines = fr.readlines()    
-        
+        lines = fr.readlines()        
         with open("caminho para lista crua", 'w') as fw:
             ptr = 1
             for line in lines:
@@ -39,8 +37,7 @@ def criar_email(lista):
         i = i.replace(" ", "")
         i = re.sub(r"[^a-zA-Z0-9]","",i)
         i = i.lower()+"@gmail.com"
-        lista_emails.append(i)
-        
+        lista_emails.append(i)        
         with open("caminho para lista_emails", "a") as lista_final:   
             lista_final.write("%s\n" %i)
             lista.pop(0)            
