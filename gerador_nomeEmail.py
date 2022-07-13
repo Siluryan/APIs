@@ -47,7 +47,7 @@ def criar_email(lista):
         i = i.lower()+"@gmail.com"
         lista_emails.append(i)
         
-        with open("/home/guilherme/caminho pra sua lista de emails", "a") as lista_final:   
+        with open("caminho pra sua lista de emails", "a") as lista_final:   
             lista_final.write("%s\n" %i)
             lista.pop(0)            
             criar_email(lista)
@@ -55,7 +55,7 @@ def criar_email(lista):
 for i in range(total_lines):
     linha_to_string()
 
-with open("/home/guilherme/caminho pra sua lista de nomes", 'w') as temp_file:
+with open("caminho pra sua lista de nomes", 'w') as temp_file:
     for item in lista_nomes:
         temp_file.write("%s\n" % item)
 
