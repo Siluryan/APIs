@@ -1,6 +1,7 @@
 ''' Você precisa de um arquivo com uma lista de nomes, sem vírgulas, onde cada nome
 deve estar em uma linha. Além disso, crie dois arquivos, um para a lista de nomes formatada e
 um para a lista de emails que será gerada '''
+
 import re
 import mmap
 
