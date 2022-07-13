@@ -1,7 +1,6 @@
 ''' Você precisa de um arquivo com uma lista de nomes, sem vírgulas, onde cada nome
 deve estar em uma linha. Além disso, crie dois arquivos, um para a lista de nomes formatada e
 um para a lista de emails que será gerada '''
-
 import re
 import mmap
 
@@ -21,9 +20,7 @@ def contar_linhas():
 total_lines = contar_linhas()
 
 def linha_to_string():
-
-    with open("caminho para lista crua") as lista:
-       
+    with open("caminho para lista crua") as lista:       
         linha = lista.readline(total_lines).replace('\n', ' ')
         lista_nomes.append(linha)
 
@@ -52,8 +49,7 @@ def criar_email(lista):
 for i in range(total_lines):
     linha_to_string()
 
-with open("caminho para lista_nomes", 'w') as temp_file:
-   
+with open("caminho para lista_nomes", 'w') as temp_file:   
     for item in lista_nomes:
         temp_file.write("%s\n" % item)
 
