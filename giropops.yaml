@@ -1,0 +1,52 @@
+Resources:
+  #CRIANDO VPC
+  NovoVPC:
+    Type: AWS::ECS::VPC
+    Properties:
+      CidrBlock: 10.100.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+      - Key: Name
+        Value: !Sub ${AWS::StackName}-VPC
+  
+  #INTERNET GATEWAY
+  NovoInternetGateway:
+    Type: AWS::EC2::InternetGateway
+    DependsOn: NovoVPC
+  
+  #CONECTANDO O INTERNET GATEWAY COM VPC
+  NovoAttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref NovoVPC
+      InternetGatewayId: !Ref NovoInternetGateway
+
+  #SUBNET PUBLICA
+  NovaSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.100.1.0/24
+      VpcId: !Ref NovoVPC
+      AvailabilityZone: !Select [0, !GetAZs '' ]
+      Tags:
+      Key: Name
+      Value: !Sub ${AWS::StackName}-Publica
+
+  #INTERNET PRIVADA
+  NovaSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.100.10.0/24
+      VpcId: !Ref NovoVPC
+      AvailabilityZone: !Select [0, !GetAZs '' ]
+      Tags:
+      Key: Name
+      Value: !Sub ${AWS::StackName}-Privada
+
+  #ELASTIC IP PARA O NAT GATEWAY
+
+  #NAT GATEWAY
+  NovoNATGateway:
+  Type: AWS::EC2::NatGateway
+    Properties:
