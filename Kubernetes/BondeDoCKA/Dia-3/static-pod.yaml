@@ -1,4 +1,10 @@
-texto
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: init-demo
+spec:
+  containers:
     - name: nginx
       image: nginx
       ports:
