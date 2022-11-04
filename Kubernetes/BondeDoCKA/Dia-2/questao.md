@@ -32,4 +32,4 @@
 	
 	- Precisa ter outros 2 containers com a imagem do busybox, o primeiro imprimindo um conteudo no arquivo /tmp/index.html e o segundo aplicando um tail -f no arquivo gerado no primeiro container
 
-	- [pod.yaml](https://github.com/Siluryan/Diversos/blob/main/Kubernetes/BondeDoCKA/Dia-2/pods.yaml)
+	[pod.yaml](https://github.com/Siluryan/Diversos/blob/main/Kubernetes/BondeDoCKA/Dia-2/pods.yaml)
