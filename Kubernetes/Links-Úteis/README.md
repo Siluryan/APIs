@@ -6,7 +6,7 @@
 	
 - Open NGINX from our browser using Kind:
 
-	- kubectl port-forward svc/service-name 8081:80
+	kubectl port-forward svc/service-name 8081:80
 	
 	link: https://octopus.com/blog/testing-with-kind	
 
