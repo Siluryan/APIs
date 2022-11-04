@@ -1,4 +1,4 @@
-- How to ssh into Kind cluster nodes with containerd runtime:
+- How to get into a Kind cluster node with containerd runtime:
 
 		docker exec -it node-name sh
 
