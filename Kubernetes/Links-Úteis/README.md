@@ -1,12 +1,12 @@
 - How to ssh into Kind cluster nodes with containerd runtime:
 
-	docker exec -it node-name sh
+		docker exec -it node-name sh
 
 	link: https://stackoverflow.com/questions/69108075/how-to-ssh-into-kind-cluster-nodes-with-containerd-runtime
 	
 - Open NGINX from our browser using Kind:
 
-	kubectl port-forward svc/service-name 8081:80
+		kubectl port-forward svc/service-name 8081:80
 	
 	link: https://octopus.com/blog/testing-with-kind	
 
