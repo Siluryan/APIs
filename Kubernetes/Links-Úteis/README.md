@@ -15,7 +15,7 @@
 
 	- Download precompiled binaries:
 	
-	link: https://github.com/seredot/kubectl-example/releases
+		https://github.com/seredot/kubectl-example/releases
 	
 	- Extract the binary and move into the directory created, them apply this command:
 	
