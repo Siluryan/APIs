@@ -30,6 +30,7 @@ Observações:
 		
 	- caso precise substituir linhas:
 	
-		sed -i "nºd" static-pod.yaml && sed -i "nºi texto-que-ira-substituir-o-antigo" static-pod.yaml (coloque o número da linha seguido pela letra d entre aspas para deletar e coloque o número da linha seguindo pela letra i e depois pelo texto para inserir)
+		sed -i "nºd" static-pod.yaml && sed -i "nºi texto-que-ira-substituir-o-antigo" static-pod.yaml
+		(coloque o número da linha seguido pela letra d entre aspas para deletar e coloque o número da linha seguindo pela letra i e depois pelo texto para inserir)
 
 
