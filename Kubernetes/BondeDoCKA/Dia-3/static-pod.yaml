@@ -1,9 +1,4 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: giropops 
-spec:
-  containers:
+texto
     - name: nginx
       image: nginx
       ports:
