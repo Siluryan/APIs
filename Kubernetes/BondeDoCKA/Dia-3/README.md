@@ -28,7 +28,7 @@ Observações:
 		
 		sed -i "nºd" static-pod.yaml 
 		
-			* coloque o número da linha seguido pela letra d entre aspas para deletar
+		* coloque o número da linha seguido pela letra d entre aspas para deletar
 		
 	- caso precise substituir linhas:
 	
