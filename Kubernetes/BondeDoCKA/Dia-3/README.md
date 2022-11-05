@@ -4,7 +4,7 @@
 
 Criar um pod estático utilizando a imagem do nginx
 
-O Kind não permite scp de forma nativa e portanto você precisa criar o Pod Estático manualmente. Existem algumas formas de fazer isso de dentro do node (consulte esse [link](https://github.com/Siluryan/Diversos/tree/main/Kubernetes/Links-%C3%9Ateis) caso não sabia como entrar num node provisionado pelo Kind):
+O Kind não permite scp de forma nativa e portanto você precisa criar o Pod Estático manualmente. Existem algumas formas de fazer isso de dentro do node (consulte esse [link](https://github.com/Siluryan/Diversos/tree/main/Kubernetes/LinksUteis) caso não sabia como entrar num node provisionado pelo Kind):
 
 1. Dentro do node:
 	
