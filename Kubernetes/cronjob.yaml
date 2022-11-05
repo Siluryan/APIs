@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: giropops-cron
+  namespace: default
+spec:
+  schedule: '*/1 * * * *'
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: giropops-cron
+            image: busybox
+            args:
+              - /bin/sh
+              - -c
+              - date; echo Helloups; sleep 30
+          restartPolicy: OnFailure
