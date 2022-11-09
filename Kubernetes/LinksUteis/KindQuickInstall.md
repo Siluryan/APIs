@@ -21,9 +21,9 @@ go version
 
 1.2 Caso não tenha o Go instalado, acesse esse link para ver como realizar a instalação:
 
-```
-https://go.dev/doc/install
-```
+
+    https://go.dev/doc/install
+
 
 1.2 Se a versão do seu Go for inferior a 1.17:
     
