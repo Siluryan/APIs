@@ -21,7 +21,7 @@ go version
 
 1.2 Caso não tenha o Go instalado, acesse esse link para ver como realizar a instalação:
 
-```bash
+```
 https://go.dev/doc/install
 ```
 
