@@ -44,12 +44,3 @@ kubeadm config images pull --cri-socket /run/containerd/containerd.sock
 mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 chown $(id -u):$(id -g) $HOME/.kube/config
-
-	
-
-
-
-	
-	
-	
-	
