@@ -1,3 +1,7 @@
+- Kind Quick Install guide:
+
+	link: [Kind Quick Install](https://github.com/Siluryan/Diversos/blob/main/Kubernetes/LinksUteis/KindQuickInstall.md)
+
 - How to get into a Kind cluster node with containerd runtime:
 
 		docker exec -it node-name sh
