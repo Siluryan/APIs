@@ -46,7 +46,7 @@ Em **List** podemos ter elementos duplicados. **Set** contém apenas elementos d
 ### 4. Casos de Uso
 
 ```
-- List: quando se quer manes a ordem dos elementos;
+- List: quando se quer manter a ordem dos elementos;
 - Set: impedir a inserção de elementos duplicados;
 - Map: recuperação rápida de dados do tipo chave-valor.
 ```
