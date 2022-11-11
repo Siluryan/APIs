@@ -17,7 +17,7 @@ A principal diferença entre List e ArrayList é que **List** é uma interface e
 
 ### Diferença entre as interfaces List, Set e Map
 
-1. Ordenação
+### 1. Ordenação
 
 **List** representa uma sequência ordenada cujos elementos são accessíves por índice.
 
@@ -30,13 +30,13 @@ A principal diferença entre List e ArrayList é que **List** é uma interface e
 **Map** representa o mapeamento da chave para valores. A ordenação em Map também é específica para cada implementação.
     Ex:
     **TreeMap** é ordenada;
-    **HashMap" não é ordenada.
+    **HashMap** não é ordenada.
 
-2. Duplicatas
+### 2. Duplicatas
 
 Em **List** podemos ter elementos duplicados. **Set** contém apenas elementos distintos e em **Map** não é permitido chaves duplicadas.
 
-3. Valores Nulos
+### 3. Valores Nulos
 
 **List** permite qualquer número de valores nulos, enquanto **Set** contém no máximo um elemento nulo. **Map** normalmente permite null como chave e valor, mas algumas implementações proíbem chaves e valores nulos.
 
@@ -49,7 +49,5 @@ Em **List** podemos ter elementos duplicados. **Set** contém apenas elementos d
 Ref:
 
 https://www.alura.com.br/conteudo/java-collections--amp?gclid=Cj0KCQiAgribBhDkARIsAASA5bu4N7r1Ujq-ralR60PjEOKSKUfVZqE4c-T_ihTGLZl6sB93mz7eAvEaAhraEALw_wcB
-
 https://homepages.dcc.ufmg.br/~rodolfo/aedsi-2-09/
-
 https://www.techiedelight.com/pt/difference-between-list-set-map-interface-java/
