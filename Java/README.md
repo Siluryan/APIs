@@ -23,33 +23,38 @@ A principal diferença entre List e ArrayList é que **List** é uma interface e
 
 **Set** representa uma coleção DISTINTA de elementos que podem ser ordenados ou não, dependendo da implementação. 
     Ex:
-    **HashSet** é desordenada;
-    **LinkedHashSet** é ordenada;
-    **TreeSet** é ordenada por ordem natural ou por algum comparador fornecido.
-
+```
+    - HashSet é desordenada;
+    - LinkedHashSet é ordenada;
+    - TreeSet é ordenada por ordem natural ou por algum comparador fornecido.
+```
 **Map** representa o mapeamento da chave para valores. A ordenação em Map também é específica para cada implementação.
     Ex:
-    **TreeMap** é ordenada;
-    **HashMap** não é ordenada.
-
+```
+    - TreeMap é ordenada;
+    - HashMap não é ordenada.
+```
 ### 2. Duplicatas
 
 Em **List** podemos ter elementos duplicados. **Set** contém apenas elementos distintos e em **Map** não é permitido chaves duplicadas.
 
 ### 3. Valores Nulos
 
-**List** permite qualquer número de valores nulos, enquanto **Set** contém no máximo um elemento nulo. **Map** normalmente permite null como chave e valor, mas algumas implementações proíbem chaves e valores nulos.
+
+List permite qualquer número de valores nulos, enquanto Set contém no máximo um elemento nulo. Map normalmente permite null como chave e valor, mas algumas implementações proíbem chaves e valores nulos.
 
 4. Casos de Uso
 
-**List**: quando se quer manes a ordem dos elementos;
-**Set**: impedir a inserção de elementos duplicados;
-**Map**: recuperação rápida de dados do tipo chave-valor.
-
+```
+- List: quando se quer manes a ordem dos elementos;
+- Set: impedir a inserção de elementos duplicados;
+- Map: recuperação rápida de dados do tipo chave-valor.
+```
 Ref:
-
+```
 https://www.alura.com.br/conteudo/java-collections--amp?gclid=Cj0KCQiAgribBhDkARIsAASA5bu4N7r1Ujq-ralR60PjEOKSKUfVZqE4c-T_ihTGLZl6sB93mz7eAvEaAhraEALw_wcB
 
 https://homepages.dcc.ufmg.br/~rodolfo/aedsi-2-09/
 
 https://www.techiedelight.com/pt/difference-between-list-set-map-interface-java/
+```
