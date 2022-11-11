@@ -13,5 +13,10 @@ List e ArrayList são os membros do framework Collection.
 **ArrayList** cria uma matriz dinâmica de objetos que aumenta ou reduz de tamanho sempre que necessário.
 
 A principal diferença entre List e ArrayList é que **List** é uma interface e **ArrayList** é uma classe.
+```
+Ref:
+https://www.alura.com.br/conteudo/java-collections--amp?gclid=Cj0KCQiAgribBhDkARIsAASA5bu4N7r1Ujq-ralR60PjEOKSKUfVZqE4c-T_ihTGLZl6sB93mz7eAvEaAhraEALw_wcB
+https://homepages.dcc.ufmg.br/~rodolfo/aedsi-2-09/classes-implementam-interfaces.html
+```
 
 
