@@ -43,7 +43,7 @@ Em **List** podemos ter elementos duplicados. **Set** contém apenas elementos d
 
 **List** permite qualquer número de valores nulos, enquanto **Set** contém no máximo um elemento nulo. **Map** normalmente permite null como chave e valor, mas algumas implementações proíbem chaves e valores nulos.
 
-4. Casos de Uso
+### 4. Casos de Uso
 
 ```
 - List: quando se quer manes a ordem dos elementos;
