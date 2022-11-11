@@ -1,10 +1,10 @@
-### Interfaces e Classes
+## Interfaces e Classes
 
 Uma **interface** dá um nome para um conjunto de constantes e operações (assinaturas de métodos). Estas constantes e operações modelam um certo comportamento. O interesse nas inteerfaces ocorre pelo fato de podermos definir **o que** é feito sem termos que definir como (não existem instâncias de interfaces).
 
 Uma **classe** dá um nome para um conjunto de campos e métodos(funções e procedimentos). Estes campos e métodos modelam um certo conceito. O interesse nas classes ocorre,basicamente em duas situações. Primeiramente, pelo fato de que um comando só pode existir dentro de um elemento(p.ex. um método) de uma classe. Em segundo lugar, pelo fato de que uma classe define um tipo. Podemos assim definir variáveis que irão conter referências para instâncias da respectiva classe.
 
-### List e ArrayList
+## List e ArrayList
 
 List e ArrayList são os membros do framework Collection.
 
@@ -15,7 +15,7 @@ List e ArrayList são os membros do framework Collection.
 A principal diferença entre List e ArrayList é que **List** é uma interface e **ArrayList** é uma classe.
 
 
-### Diferença entre as interfaces List, Set e Map
+## Diferença entre as interfaces List, Set e Map
 
 ### 1. Ordenação
 
@@ -49,5 +49,7 @@ Em **List** podemos ter elementos duplicados. **Set** contém apenas elementos d
 Ref:
 
 https://www.alura.com.br/conteudo/java-collections--amp?gclid=Cj0KCQiAgribBhDkARIsAASA5bu4N7r1Ujq-ralR60PjEOKSKUfVZqE4c-T_ihTGLZl6sB93mz7eAvEaAhraEALw_wcB
+
 https://homepages.dcc.ufmg.br/~rodolfo/aedsi-2-09/
+
 https://www.techiedelight.com/pt/difference-between-list-set-map-interface-java/
