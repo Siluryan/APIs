@@ -1,4 +1,4 @@
-- Kind Quick Install guide:
+- Kind quick install:
 
 	link: [Kind Quick Install](https://github.com/Siluryan/Diversos/blob/main/Kubernetes/LinksUteis/KindQuickInstall.md)
 
