@@ -1,6 +1,6 @@
 - Kind quick install:
 
-	link: [Kind Quick Install](https://github.com/Siluryan/Diversos/blob/main/Kubernetes/LinksUteis/KindQuickInstall.md)
+	link: [Kind quick install](https://github.com/Siluryan/Diversos/blob/main/Kubernetes/LinksUteis/KindQuickInstall.md)
 
 - How to get into a Kind cluster node with containerd runtime:
 
