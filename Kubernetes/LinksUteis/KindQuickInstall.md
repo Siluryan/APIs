@@ -1,4 +1,4 @@
-## Guia rápido de configuração do Kind
+## Script de instalação do Kind
 
 Copie o arquivo [kind_install.sh](https://github.com/Siluryan/Diversos/blob/main/Kubernetes/LinksUteis/kind_install.sh) para o seu computador, abra um terminal no local onde salvou o arquivo, e digite o seguinte comando:
 
