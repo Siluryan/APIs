@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: app-ingress
+spec:
+  rules:
+  - host: ec2-35-172-139-81.compute-1.amazonaws.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /app1  
+        backend:
+          service:
+            name: appsvc1
+            port:
+              number: 80
+        path: /app2  
+        backend:
+          service:
+            name: appsvc2
+            port:
+              number: 80
+        
+         
