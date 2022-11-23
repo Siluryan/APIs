@@ -1,0 +1,9 @@
+[2J[HCONTAINER ID   NAME                   CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O        PIDS
+3cafb38ef9ec   meuk8s-control-plane   9.10%     747.4MiB / 7.763GiB   9.40%     7.23MB / 71MB    709MB / 1.11GB   275
+ab1720730420   meuk8s-worker          1.98%     250.5MiB / 7.763GiB   3.15%     71.2MB / 7.1MB   192MB / 21MB     159
+[2J[HCONTAINER ID   NAME                   CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O        PIDS
+3cafb38ef9ec   meuk8s-control-plane   9.10%     747.4MiB / 7.763GiB   9.40%     7.23MB / 71MB    709MB / 1.11GB   275
+ab1720730420   meuk8s-worker          1.98%     250.5MiB / 7.763GiB   3.15%     71.2MB / 7.1MB   192MB / 21MB     159
+[2J[HCONTAINER ID   NAME                   CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O        PIDS
+3cafb38ef9ec   meuk8s-control-plane   9.91%     747.4MiB / 7.763GiB   9.40%     7.23MB / 71MB    709MB / 1.11GB   275
+ab1720730420   meuk8s-worker          12.40%    251.1MiB / 7.763GiB   3.16%     71.2MB / 7.1MB   192MB / 21MB     159

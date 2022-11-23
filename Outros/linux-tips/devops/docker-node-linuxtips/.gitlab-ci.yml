@@ -1,0 +1,36 @@
+services:
+  - docker:19.03.13-dind
+variables:
+  DOCKER_HOST: tcp://docker:2376
+  DOCKER_TLS_CERTDIR: "/certs"
+  DOCKER_TLS_VERIFY: 1
+  DOCKER_CERT_PATH: "$DOCKER_TLS_CERTDIR/client"
+
+stages:
+  - container
+  - cluster
+
+build-job:      
+  stage: container
+  tags:
+    - k8s-runner
+  image: docker:19.03.13
+  services:
+    - docker:19.03.13-dind
+  before_script:
+    - docker info
+    - docker login --username $REGISTRY_USERNAME --password $REGISTRY_PASSWORD
+  script:
+    - docker build -t camillamartins/dockernode:$CI_PIPELINE_ID .
+    - docker push camillamartins/dockernode:$CI_PIPELINE_ID
+
+cluster:
+  image: bitnami/kubectl
+  stage: cluster
+  tags:
+    - k8s-runner
+  script:
+    - kubectl apply -f deployment.yaml
+    - kubectl set image deployment/dockercami dockercami=camillamartins/dockernode:$CI_PIPELINE_ID -n default
+    - kubectl delete svc -n default dockercami-loadbalance --ignore-not-found=true
+    - kubectl expose deployment dockercami --port=8080 --target-port=8080 --type=LoadBalancer --name=dockercami-loadbalance --namespace=default
