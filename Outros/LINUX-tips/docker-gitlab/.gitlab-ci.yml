@@ -1,14 +1,52 @@
-image:
-  name: gcr.io/kaniko-project/executor:debug
-  entrypoint: [""]
+image: 
+  name: hashicorp/terraform:light
+  entrypoint: ["/bin/sh", "-c"]
 
 stages:
   - build
+  - plan
+  - apply
+  - destroy
 
 criando_imagem_container:
   stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
   script:
     - mkdir -p /kaniko/.docker
     - echo "{\"auths\":{\"$CI_REGISTRY\":{\"auth\":\"$(echo -n ${CI_REGISTRY_USER}:${CI_REGISTRY_PASSWORD} | base64)\"}}}" > /kaniko/.docker/config.json
-    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/docker-gitlab/Dockerfile --destination $CI_REGISTRY_IMAGE
+    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $CI_REGISTRY_IMAGE
+  when: manual
+
+terraform_plan:
+  stage: plan
+  script:
+    - cd $CI_PROJECT_DIR/tfvars
+    # - rm -rf .terraform
+    - terraform init -input=false
+    - terraform plan -input=false -out tfplan
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/tfvars/tfplan
+  when: always
+
+terraform_apply:
+  stage: apply
+  script:
+    - cd $CI_PROJECT_DIR/tfvars
+    # - rm -rf .terraform
+    - terraform init -input=false
+    - terraform apply -input=false $CI_PROJECT_DIR/tfvars/tfplan
+  dependencies:
+    - terraform_plan
+  when: manual
+
+terraform_destroy:
+  stage: destroy
+  script:
+    - cd $CI_PROJECT_DIR/tfvars
+    # - rm -rf .terraform
+    - terraform init -input=false
+    - terraform destroy -input=false -auto-approve
   when: manual
