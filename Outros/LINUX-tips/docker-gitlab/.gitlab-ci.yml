@@ -8,7 +8,56 @@ stages:
   - apply
   - destroy
 
-criando_imagem_container:
+# Templates
+#####################################################
+# include:
+#   - remote: 'https://gitlab.com/awesome-projectraw/main/.before-script-template.yml'
+#   - local: path
+#   - template: templates oficiais do Gitlab
+#####################################################
+#   - project: 'my-group/my-project'
+#     ref: main
+#     file: '/templates/.gitlab-ci-template.yml'
+
+# Anchors
+.pipeline_config: &default_variables
+  DAY: "day-x"
+  APP: "giropops"
+  VERSION: "1.0"
+
+.job_template: &job_configuration
+  script:
+    - test project
+  tags:
+    - dev
+
+.postgres_services:
+  services: &postgres_configuration
+    - postgres
+    - ruby
+
+.mysql_services:
+  services: &mysql_configuration
+    - mysql
+    - ruby
+
+# Jobs using anchors
+test:postgres:
+  <<: *job_configuration
+  services: *postgres_configuration
+  tags:
+    - postgres
+
+test:mysql:
+  <<: *job_configuration
+  services: *mysql_configuration
+  tags:
+    - mysql
+
+# Jobs
+
+## Imagem Docker
+build_imagem_container:
   stage: build
   image:
     name: gcr.io/kaniko-project/executor:debug
@@ -19,6 +68,7 @@ criando_imagem_container:
     - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $CI_REGISTRY_IMAGE
   when: manual
 
+## Terraform EC2
 terraform_plan:
   stage: plan
   script:
