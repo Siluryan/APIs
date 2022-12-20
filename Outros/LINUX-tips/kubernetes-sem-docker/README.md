@@ -131,7 +131,7 @@ Comando:
     systemctl daemon-reload
 
 ## 13. Para efeito de testes ou implementação em ambientes não críticos, desabilite o SElinux e o FirewallD
-Em ambientes produtivos você precisará buscar as informações necessárias para configurar corretamente essas opções, assim como se certificar de estar em compliance com as normas ou regulamentos de sua empresa)
+Em ambientes produtivos você precisará buscar as informações necessárias para configurar corretamente essas opções, assim como se certificar de estar em compliance com as normas ou regulamentos de sua empresa).
 
 Comando:
 
