@@ -86,14 +86,14 @@ Comando:
 
     tar -xvzf containerd-1.2.1.linux-amd64.tar.gz -C /usr/local/
 
-## 8.1 Baixe o runc e já o redirecione pro local apropriado
+## 8.1 Baixe o runC e já o redirecione pro local apropriado
 Não se esqueça de procurar a versão mais recente, e use a url a seguir apenas como exemplo ou referência:
 
 Comando (tudo na mesma linha - tem um espaço entre runc e https):
 
     wget -O /usr/local/sbin/runc https://github.com/opencontainers/runc/releases/download/v1.0.0-rc6/runc.amd64
 
-## 8.2 Dê ao runc a permissão de execução
+## 8.2 Dê ao runC a permissão de execução
 Comando:
 
     chmod 755 /usr/local/sbin/runc
