@@ -12,7 +12,7 @@ Portas a serem abertas nos nodes:
 - kube-controller-manager = 10252 TCP
 - kubelet API read-only = 10255 TCP
 ```
-### WORKER
+### WORKERS
 ```yaml
 - kubelet API = 10250 TCP
 - kubelet API read-only = 10255 TCP
