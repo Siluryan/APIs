@@ -4,7 +4,7 @@ Obs: Salvo indicação contrária, as configurações a seguir devem ser realiza
 Portas a serem abertas nos nodes:
 
 ### MASTER
-```json
+```yaml
 - kube-apiserver = 6443 TCP
 - etcd server API = 2379-2380 TCP
 - kubelet API = 10250 TCP
@@ -13,7 +13,7 @@ Portas a serem abertas nos nodes:
 - kubelet API read-only = 10255 TCP
 ```
 ### WORKER
-```json
+```yaml
 - kubelet API = 10250 TCP
 - kubelet API read-only = 10255 TCP
 - nodeport services = 30000-32767 TCP
@@ -57,7 +57,7 @@ reiniciar a máquina uma vez que foram habilitados módulos adicionais do kernel
 
 ## 5. /etc/yum.repos.d/k8s.repo
 Crie esse arquivo também (os links devem ser digitados numa única linha):
-```json
+```yaml
 [kubernetes]
 name=Kubernetes
 baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
@@ -120,7 +120,7 @@ Comando:
 
 ## 11.2 /etc/systemd/system/kubelet.service.d/0-containerd.conf
 Esse arquivo também deve ser criado com as seguintes informações:
-```json
+```yaml
 [Service]
 Environment="KUBELET_EXTRA_ARGS=--container-runtime=remote --runtime-request-timeout=15m --container-runtime-endpoint=unix:///run/containerd/containerd.sock"
 ```
