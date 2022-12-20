@@ -1,4 +1,5 @@
-Obs: Salvo indicação contrária, as configurações a seguir devem ser realizadas em todos os nodes (nesse exemplo estão sendo criados 3 nodes)
+# Kubernetes sem Docker
+**Obs**: Salvo indicação contrária, as configurações a seguir devem ser realizadas em todos os nodes (nesse exemplo estão sendo criados 3 nodes)
 
 ## 0. Portas
 Portas a serem abertas nos nodes:
