@@ -17,3 +17,5 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 #Kind
 sudo curl -Lo /usr/local/bin/kind https://github.com/kubernetes-sigs/kind/releases/download/v0.16.0/kind-linux-amd64
 sudo chmod +x /usr/local/bin/kind
+
+exit
