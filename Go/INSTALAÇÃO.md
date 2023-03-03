@@ -1,6 +1,6 @@
 ### Tutorial de INSTALAÇÃO
 
-Independente do seu sistema operacional, baixe o binário do Go na sua máquina acessando a página de download:
+Independente do seu sistema operacional, baixe o binário Go na sua máquina acessando a página de download:
 
 https://go.dev/doc/install
 
